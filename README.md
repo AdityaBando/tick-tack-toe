@@ -3,7 +3,7 @@ This is a two player game.
 
 # APPROACH:
 
-1. Initilize a variable __turn__ and put __O__ into it (ZERO).
+1. Initilize a variable __turn="O"__.
 2. Display matrix of the game.
 3. Get input from the first player.
 4. Use another function (__game_brain()__) to see if vertical/horizontal/diagonals contains same string or not.
