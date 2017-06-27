@@ -7,8 +7,6 @@ def ingame(): #NT
     location=raw_input("Enter location\n>")
     if location=='a' and matrix[0][0]=="a":
         matrix[0][0]=turn 
-        print matrix[0][0]
-        print "control given to game brain"
         game_brain()
         
     elif location=='b' and matrix[0][1]=="b":
@@ -38,7 +36,7 @@ def ingame(): #NT
     else :
         print "Learn to type from a to i."
         
-def output_game(): #not working
+def output_game(): #not working / REJECTED/ OLD VERSION
     for i in range(0,3):
         for j in range(0,3):
             print "|%s|"%matrix[i][j]
@@ -48,6 +46,7 @@ def output_gamev1(): #DONE
         print "%s|%s|%s"%(matrix[i][0],matrix[i][1],matrix[i][2])
 
 def game_brain(): #NT
+    print "control given to game brain"
     if matrix[0][0]==matrix[1][1]==matrix[2][2]:
         print "You WIN! You're our new champion!!!"
         exit(0)
@@ -75,12 +74,12 @@ def game_brain(): #NT
     else:
         print "Your Turn Dude!"
         output_gamev1()
-        turn='X' #problem here
+        turn='X' #problem here <--- UNABLE TO UPDATE TURN!!!
         ingame()
 
         
-
-    
+#STARTS HERE:
+   
 a=raw_input("Enter Your name:")
 b=raw_input("Your Opponent's name:")
 print "Here we Go!"
