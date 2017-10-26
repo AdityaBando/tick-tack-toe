@@ -1,9 +1,10 @@
+# tick-tack-toe project in python
 # variables:
 matrix=[['a','b','c'],['d','e','f'],['g','h','i']]
 turn="0"
 #used functions:
 
-def ingame(): #NT
+def ingame(): #get input from user and update matrix
     location=raw_input("Enter location\n>")
     if location=='a' and matrix[0][0]=="a":
         matrix[0][0]=turn 
@@ -36,10 +37,7 @@ def ingame(): #NT
     else :
         print "Learn to type from a to i."
         
-def output_game(): #not working / REJECTED/ OLD VERSION
-    for i in range(0,3):
-        for j in range(0,3):
-            print "|%s|"%matrix[i][j]
+        
 def output_gamev1(): #DONE 
     print "your game baby!"    
     for i in range(0,3):
